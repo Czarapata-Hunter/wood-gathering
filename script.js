@@ -17,7 +17,11 @@ let playing = true;
 let rewardsArray = [];
 
 // Need to make sure it displays correctly if 2 or more items are received
-const rare = ['Mark of Ent', 'Ancient Resin', 'Orphaned baby OwlBear', 'Orphaned Baby Ent'];
+const rare = [
+    'Mark of Ent', 
+    'Ancient Resin', 
+    'Orphaned baby OwlBear', 
+    'Orphaned Baby Ent'];
 
 const rareResource = () => {
     const item = rare[Math.floor(Math.random() * rare.length)];
