@@ -7,6 +7,7 @@ const wood = document.getElementById('wood');
 const hits = document.getElementById('hits');
 const fails = document.getElementById('fails');
 const rewardItems = document.getElementById('rewardItems');
+const outOfHits = document.querySelector('.outOfHits');
 
 
 let hitCount = 0;
@@ -16,7 +17,7 @@ let playing = true;
 let rewardsArray = [];
 
 // Need to make sure it displays correctly if 2 or more items are received
-const rare = ['Mark of Ent', 'Ancient Resin', 'Orphaned OwlBear'];
+const rare = ['Mark of Ent', 'Ancient Resin', 'Orphaned baby OwlBear', 'Orphaned Baby Ent'];
 
 const rareResource = () => {
     const item = rare[Math.floor(Math.random() * rare.length)];
@@ -43,23 +44,67 @@ const failing = () => {
     fails.textContent = failCount;
 }
 
+const zeroHits = () => {
+    outOfHits.classList.remove('hidden');
+}
+
 btnInfo.addEventListener('click', function() {
     // Add modal to pop up with rules on the buttons when hit
 })
 
 btnPrecision.addEventListener('click', function(){
+    let dieValue = 0;
     if (playing) {
-        const dieValue = Math.ceil(Math.random() * 6);
-
         if(hitCount < 20 && failCount < 3) {
-            if(dieValue !== 1) {
-                woodCount += dieValue;
-                success();
-            } else {
+            
+            const dice = Math.ceil(Math.random() * 6000);
+            if (dice <= 1000) {
+                dieValue = 1;
                 failing();
+            } else if(dice > 1000 && dice <= 2000) {
+                dieValue = 2;
+                woodCount += dieValue;
+                    success();
+            } else if(dice > 2000 && dice <= 3000) {
+                dieValue = 3;
+                woodCount += dieValue;
+                    success();
+            } else if(dice > 3000 && dice <= 4000) {
+                dieValue = 4;
+                woodCount += dieValue;
+                    success();
+            } else if(dice > 4000 && dice <= 5000) {
+                dieValue = 5;
+                woodCount += dieValue;
+                    success();
+            } else if(dice > 5000 && dice <= 5600) {
+                dieValue = 6;
+                woodCount += dieValue;
+                    success();
+            } else if(dice > 5600 && dice <= 5900) {
+                dieValue = 7;
+                woodCount += 6;
+                    success();
+            } else if(dice > 5900 && dice <= 5950) {
+                dieValue = 8;
+                woodCount += 6;
+                    success();
+            } else if(dice > 5950 && dice <= 5980) {
+                dieValue = 9;
+                woodCount += 6;
+                    success();
+            } else if(dice > 5980 && dice <= 5995) {
+                dieValue = 10;
+                woodCount += 6;
+                    success();
+            } else {
+                dieValue = 11;
+                woodCount += 6;
+                    success();
             }
         } else {
             playing = false;
+            zeroHits();
             console.log('Out of hits');
         }
     }
@@ -71,62 +116,18 @@ btnPrecision.addEventListener('click', function(){
 // high rolls out of a thousand will give special resource
 
 btnHard.addEventListener('click', function() {
-    let dieValue = 0;
-    
     if(playing) {
-        const dice = Math.ceil(Math.random() * 1000);
-        if (dice <= 300) {
-            dieValue = 1;
-        } else if(dice > 300 && dice <= 350) {
-            dieValue = 7; 
-        } else if(dice > 350 && dice <= 400) {
-            dieValue = 8;
-        } else if(dice > 400 && dice <= 450) {
-            dieValue = 9;
-        } else if(dice > 450 && dice <= 500) {
-            dieValue = 10;
-        } else if(dice > 500 && dice <= 550) {
-            dieValue = 11;
-        } else if(dice > 550 && dice <= 600) {
-            dieValue = 12;
-        } else if(dice > 600 && dice <= 650) {
-            dieValue = 13;
-        } else if(dice > 650 && dice <= 700) {
-            dieValue = 14;
-        } else if(dice > 700 && dice <= 750) {
-            dieValue = 15;
-        } else if(dice > 750 && dice <= 800) {
-            dieValue = 16;
-        } else if(dice > 800 && dice <= 850) {
-            dieValue = 17;
-        } else if(dice > 850 && dice <= 900) {
-            dieValue = 18;
-        } else if(dice > 900 && dice <= 950) {
-            dieValue = 19;
-        } else if(dice > 950 && dice <= 980) {
-            dieValue = 20;
-        } else {
-            dieValue = 21;
-        }
-        
+        const dice = Math.ceil(Math.random() * 20);
         if(hitCount < 20 && failCount < 3) {
-            if(dieValue === 21) {
-                woodCount += dieValue;
-                success();
-
-                // Push rare item to array
-                // cycle through array in-case of multiple hits to display
-                rareResource();
-
-            } else if(dieValue > 6 && dieValue <= 20){
-                woodCount += dieValue;
-                success();
-            } else {
+            if(dice <= 5) {
                 failing();
+            } else {
+                woodCount += dice;
+                success();
             }
         } else {
             playing = false;
+            zeroHits();
             console.log('Out of hits');
-        }
-    }
+        }}
 });
