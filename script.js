@@ -28,8 +28,6 @@ const failing = () => {
 
 btnInfo.addEventListener('click', function() {
     // Add modal to pop up with rules on the buttons when hit
-    console.log('clicked');
-    console.log({hitCount});
 })
 
 btnPrecision.addEventListener('click', function(){
@@ -43,10 +41,6 @@ btnPrecision.addEventListener('click', function(){
             } else {
                 failing();
             }
-            console.log('HitCount:', hitCount)
-            console.log('Dice:', dieValue);
-            console.log('FailCount:', failCount);
-            console.log('WoodCount:', woodCount);
         } else {
             playing = false;
             console.log('Out of hits');
@@ -109,16 +103,6 @@ btnHard.addEventListener('click', function() {
             } else {
                 failing();
             }
-
-              console.log(`
-      DEBUG INFO:
-          hitCount: ${hitCount},
-          dieValue: ${dieValue},
-          failCount: ${failCount},
-          woodCount: ${woodCount}
-      `);
-        
-            
         } else {
             playing = false;
             console.log('Out of hits');
