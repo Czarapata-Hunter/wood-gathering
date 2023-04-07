@@ -6,12 +6,29 @@ const btnHard = document.querySelector('.btn--hard');
 const wood = document.getElementById('wood');
 const hits = document.getElementById('hits');
 const fails = document.getElementById('fails');
+const rewardItems = document.getElementById('rewardItems');
 
 
 let hitCount = 0;
 let failCount = 0;
 let woodCount = 0;
 let playing = true;
+let rewardsArray = [];
+
+// Need to make sure it displays correctly if 2 or more items are received
+const rare = ['Mark of Ent', 'Ancient Resin', 'Orphaned OwlBear'];
+
+const rareResource = () => {
+    const item = rare[Math.floor(Math.random() * rare.length)];
+    rewardsArray.push(item);
+
+    // There has to be an easier way to do this. Overthinking it?
+    if(rewardsArray.length === 1) {
+        rewardItems.textContent = `${rewardsArray[0]}`;
+    } else if (rewardsArray.length === 2) {
+        rewardItems.textContent = `${rewardsArray[0]}, ${rewardsArray[1]}`;
+    }
+}
 
 const success = () => {
     hitCount++;
@@ -96,7 +113,11 @@ btnHard.addEventListener('click', function() {
             if(dieValue === 21) {
                 woodCount += dieValue;
                 success();
-                console.log('RARE RESOURCE OBTAINED!');
+
+                // Push rare item to array
+                // cycle through array in-case of multiple hits to display
+                rareResource();
+
             } else if(dieValue > 6 && dieValue <= 20){
                 woodCount += dieValue;
                 success();
