@@ -15,11 +15,35 @@
       <div class="test">
         <div>
           <section class="btns">
-            <button class="btn btn--info">Open Rules</button>
+            <button class="btn open-rules">Open Rules</button>
             <button class="btn btn--precision">Precision Hit</button>
             <button class="btn btn--hard">Hard Hit</button>
           </section>
         </div>
+        <div class="modal hidden">
+          <button class="close-rules">&times;</button>
+          <h1>Rules</h1>
+          <p>
+            Gathering wood during your downtime allows for you to hit a tree a
+            possible 20 times
+          </p>
+          <label>Precision Hit</label>
+          <p>
+            Hit the tree with absolute precision. A D6 is then rolled. Anything
+            but a 1, returns wood equal to the dice rolled. There is a chance at
+            receiving special resources during a Precision hit. Rolling a 1 on
+            the D6 will give the player one stack on their Fail Count.
+          </p>
+          <label>Hard Hit</label>
+          <p>
+            Hit the tree as hard as possible! A D20 is then rolled. Any roll
+            that is 7 or over returns wood equal to the dice rolled. There is
+            <strong>NO</strong> chance at receiving special resources during a
+            Hard Hit. Rolling a 6 or lower on the D20 results in the player
+            receiving one stack to their Fail Count
+          </p>
+        </div>
+        <div class="overlay hidden"></div>
         <div class="statistics">
           <div>
             <h3>Rewards</h3>
