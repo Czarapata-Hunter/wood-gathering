@@ -119,6 +119,7 @@ h1 {
   align-items: center;
   flex-direction: column;
   width: 50%;
+  height: 70vh;
 
   background: linear-gradient(to bottom, #000000 5%, #222222 100%);
   border-top: 2px;
@@ -142,6 +143,7 @@ h1 {
 }
 
 .modal {
+  /* display: flex; */
   position: absolute;
   top: 50%;
   left: 50%;
