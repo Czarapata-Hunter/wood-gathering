@@ -8,6 +8,7 @@ const overlay = document.querySelector('.overlay');
 const btnPrecision = document.querySelector('.btn--precision');
 const btnHard = document.querySelector('.btn--hard');
 const btnRules = document.querySelector('.open-rules');
+const btnReset = document.querySelector('.btn--reset');
 
 const wood = document.getElementById('wood');
 const hits = document.getElementById('hits');
@@ -15,11 +16,28 @@ const fails = document.getElementById('fails');
 const rewardItems = document.getElementById('rewardItems');
 const outOfHits = document.querySelector('.outOfHits');
 
-let hitCount = 0;
-let failCount = 0;
-let woodCount = 0;
-let playing = true;
-let rewardsArray = [];
+// let hitCount = 0;
+// let failCount = 0;
+// let woodCount = 0;
+// let playing = true;
+// let rewardsArray = [];
+
+let hitCount, failCount, woodCount, playing, rewardsArray;
+
+const reset = () => {
+  hitCount = 0;
+  failCount = 0;
+  woodCount = 0;
+  rewardsArray = [];
+  playing = true;
+
+  wood.textContent = 0;
+  hits.textContent = 0;
+  fails.textContent = 0;
+  rewardItems.textContent = '???';
+  outOfHits.classList.add('hidden');
+};
+reset();
 
 // Need to make sure it displays correctly if 2 or more items are received
 const rare = [
@@ -29,6 +47,8 @@ const rare = [
   'Test1',
   'Test2',
 ];
+
+btnReset.addEventListener('click', reset);
 
 btnRules.addEventListener('click', function () {
   modal.classList.remove('hidden');

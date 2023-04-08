@@ -33,7 +33,16 @@ h1 {
 
 .test {
   display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
+
+/* .test2 img {
+  display: flex;
+  flex-direction: column;
+
+  width: 40%; */
 
 /* .btn {
   display: flex;
