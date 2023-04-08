@@ -25,8 +25,9 @@ let rewardsArray = [];
 const rare = [
   'Mark of Ent',
   'Ancient Resin',
-  'Orphaned baby OwlBear',
-  'Orphaned Baby Ent',
+  'Heart of the Tree',
+  'Test1',
+  'Test2',
 ];
 
 btnRules.addEventListener('click', function () {
@@ -53,17 +54,7 @@ const closeRules = () => {
   overlay.classList.add('hidden');
 };
 
-const rareResource = () => {
-  const item = rare[Math.floor(Math.random() * rare.length)];
-  rewardsArray.push(item);
-
-  // There has to be an easier way to do this. Overthinking it?
-  if (rewardsArray.length === 1) {
-    rewardItems.textContent = `${rewardsArray[0]}`;
-  } else if (rewardsArray.length === 2) {
-    rewardItems.textContent = `${rewardsArray[0]}, ${rewardsArray[1]}`;
-  }
-};
+const rareResource = () => {};
 
 const success = () => {
   hitCount++;
@@ -112,21 +103,31 @@ btnPrecision.addEventListener('click', function () {
         success();
       } else if (dice > 5600 && dice <= 5900) {
         dieValue = 7;
+        rewardsArray.push(rare[0]);
+        rewardItems.textContent = rewardsArray.join(', ');
         woodCount += 6;
         success();
       } else if (dice > 5900 && dice <= 5950) {
         dieValue = 8;
+        rewardsArray.push(rare[1]);
+        rewardItems.textContent = rewardsArray.join(', ');
         woodCount += 6;
         success();
       } else if (dice > 5950 && dice <= 5980) {
+        rewardsArray.push(rare[2]);
+        rewardItems.textContent = rewardsArray.join(', ');
         dieValue = 9;
         woodCount += 6;
         success();
       } else if (dice > 5980 && dice <= 5995) {
+        rewardsArray.push(rare[3]);
+        rewardItems.textContent = rewardsArray.join(', ');
         dieValue = 10;
         woodCount += 6;
         success();
       } else {
+        rewardsArray.push(rare[4]);
+        rewardItems.textContent = rewardsArray.join(', ');
         dieValue = 11;
         woodCount += 6;
         success();
