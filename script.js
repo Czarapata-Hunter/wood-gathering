@@ -1,7 +1,7 @@
 'use strict';
 
 const btnOpen = document.querySelector('.open-rules');
-const btnClose = document.querySelector('.close-rules');
+// const btnClose = document.querySelector('.close-rules');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 
@@ -55,9 +55,9 @@ btnRules.addEventListener('click', function () {
   overlay.classList.remove('hidden');
 });
 
-btnClose.addEventListener('click', function () {
-  closeRules();
-});
+// btnClose.addEventListener('click', function () {
+//   closeRules();
+// });
 
 overlay.addEventListener('click', function () {
   closeRules();

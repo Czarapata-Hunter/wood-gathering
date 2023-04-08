@@ -12,17 +12,16 @@
       <div class="header">
         <h1 class="title">Wood Gathering</h1>
       </div>
+      <div class="btns">
+        <section>
+          <button class="btn open-rules">Open Rules</button>
+          <button class="btn btn--precision">Precision Hit</button>
+          <button class="btn btn--hard">Hard Hit</button>
+          <button class="btn btn--reset">Reset</button>
+        </section>
+      </div>
       <div class="test">
-        <div>
-          <section class="btns">
-            <button class="btn open-rules">Open Rules</button>
-            <button class="btn btn--precision">Precision Hit</button>
-            <button class="btn btn--hard">Hard Hit</button>
-            <button class="btn btn--reset">Reset</button>
-          </section>
-        </div>
         <div class="modal hidden">
-          <button class="close-rules">&times;</button>
           <div>
             <h1>Rules</h1>
             <p>
@@ -48,31 +47,36 @@
           </div>
         </div>
         <div class="overlay hidden"></div>
-        <div class="statistics">
-          <div>
-            <h3>Rewards</h3>
-          </div>
-          <div class="stats">
-            <div class="information">
-              <label>Hit Count</label>
-              <p class="resource" id="hits">0</p>
-            </div>
-            <div class="information">
-              <label>Wood Total</label>
-              <p class="resource" id="wood">0</p>
-            </div>
-            <div class="information">
-              <label>Fail Count</label>
-              <p class="resource" id="fails">0</p>
-            </div>
-            <div class="information">
-              <label>Rare Rewards</label>
-              <p class="resource" id="rewardItems">???</p>
-            </div>
+        <div class="test3">
+          <div class="statistics">
             <div>
-              <p class="outOfHits hidden">OUT OF HITS</p>
+              <h3>Stats</h3>
+            </div>
+            <div class="stats">
+              <div class="information">
+                <label>Hit Count</label>
+                <p class="resource" id="hits">0</p>
+              </div>
+              <div class="information">
+                <label>Wood Total</label>
+                <p class="resource" id="wood">0</p>
+              </div>
+              <div class="information">
+                <label>Fail Count</label>
+                <p class="resource" id="fails">0</p>
+              </div>
+              <div class="information">
+                <label>Rare Rewards</label>
+                <p class="resource" id="rewardItems">???</p>
+              </div>
+              <div>
+                <p class="outOfHits hidden">OUT OF HITS</p>
+              </div>
             </div>
           </div>
+        </div>
+        <div>
+          <img src="map.png" />
         </div>
       </div>
     </main>
