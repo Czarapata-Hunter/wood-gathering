@@ -23,6 +23,7 @@ const stackedWood3 = document.getElementById('stacked-wood3');
 const stackedWood4 = document.getElementById('stacked-wood4');
 const stackedWood5 = document.getElementById('stacked-wood5');
 const markOfEnt = document.getElementById('markOfEnt');
+const treeHeart = document.getElementById('treeHeart');
 
 // let hitCount = 0;
 // let failCount = 0;
@@ -51,6 +52,7 @@ const reset = () => {
   stackedWood4.classList.add('hidden');
   stackedWood5.classList.add('hidden');
   markOfEnt.classList.add('hidden');
+  treeHeart.classList.add('hidden');
 };
 reset();
 
@@ -83,6 +85,12 @@ const markOfEntPicture = () => {
   }
 };
 
+const treeHeartPicture = () => {
+  if (rewardsArray.includes('Heart of the Tree')) {
+    treeHeart.classList.remove('hidden');
+  }
+};
+
 btnReset.addEventListener('click', reset);
 
 btnRules.addEventListener('click', function () {
@@ -105,14 +113,13 @@ const closeRules = () => {
   overlay.classList.add('hidden');
 };
 
-const rareResource = () => {};
-
 const success = () => {
   hitCount++;
   hits.textContent = hitCount;
   wood.textContent = woodCount;
   woodPictures();
   markOfEntPicture();
+  treeHeartPicture();
 };
 
 const failing = () => {

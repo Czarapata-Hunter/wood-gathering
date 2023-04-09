@@ -207,6 +207,15 @@ h1 {
   left: 80%;
 }
 
+#treeHeart {
+  height: 10%;
+  width: 5%;
+  z-index: 600;
+  position: fixed;
+  top: 61%;
+  left: 86%;
+}
+
 .hits-gone {
   display: flex;
   justify-content: center;
