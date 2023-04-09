@@ -16,6 +16,13 @@ const fails = document.getElementById('fails');
 const rewardItems = document.getElementById('rewardItems');
 const outOfHits = document.querySelector('.outOfHits');
 
+//pictures
+const stackedWood = document.getElementById('stacked-wood');
+const stackedWood2 = document.getElementById('stacked-wood2');
+const stackedWood3 = document.getElementById('stacked-wood3');
+const stackedWood4 = document.getElementById('stacked-wood4');
+const stackedWood5 = document.getElementById('stacked-wood5');
+
 // let hitCount = 0;
 // let failCount = 0;
 // let woodCount = 0;
@@ -36,6 +43,12 @@ const reset = () => {
   fails.textContent = 0;
   rewardItems.textContent = '???';
   outOfHits.classList.add('hidden');
+
+  stackedWood.classList.add('hidden');
+  stackedWood2.classList.add('hidden');
+  stackedWood3.classList.add('hidden');
+  stackedWood4.classList.add('hidden');
+  stackedWood5.classList.add('hidden');
 };
 reset();
 
@@ -47,6 +60,20 @@ const rare = [
   'Test1',
   'Test2',
 ];
+
+const woodPictures = () => {
+  if (woodCount <= 30) {
+    stackedWood.classList.remove('hidden');
+  } else if (woodCount > 30 && woodCount <= 60) {
+    stackedWood2.classList.remove('hidden');
+  } else if (woodCount > 60 && woodCount <= 90) {
+    stackedWood3.classList.remove('hidden');
+  } else if (woodCount > 90 && woodCount <= 120) {
+    stackedWood4.classList.remove('hidden');
+  } else {
+    stackedWood5.classList.remove('hidden');
+  }
+};
 
 btnReset.addEventListener('click', reset);
 
@@ -80,6 +107,7 @@ const success = () => {
   hitCount++;
   hits.textContent = hitCount;
   wood.textContent = woodCount;
+  woodPictures();
 };
 
 const failing = () => {

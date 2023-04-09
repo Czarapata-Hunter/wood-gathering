@@ -140,7 +140,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.test4 {
+.preview {
   display: flex;
   flex-direction: row;
   background-image: url('EditedTestBackground.png');
@@ -149,8 +149,62 @@ h1 {
   border: 2px solid #74b807;
   width: 40vw;
   height: 60vh;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   border-radius: 20px;
+}
+
+#stacked-wood {
+  width: 15%;
+  height: 22%;
+  z-index: 1000;
+  position: relative;
+  top: 45%;
+  left: 25%;
+}
+
+#stacked-wood2 {
+  width: 15%;
+  height: 22%;
+  z-index: 900;
+  position: relative;
+  top: 45%;
+  left: 20%;
+}
+
+#stacked-wood3 {
+  width: 15%;
+  height: 22%;
+  z-index: 800;
+  position: relative;
+  top: 45%;
+  left: 15%;
+}
+
+#stacked-wood4 {
+  width: 15%;
+  height: 22%;
+  z-index: 1100;
+  position: relative;
+  top: 40%;
+  left: -16%;
+}
+
+#stacked-wood5 {
+  width: 15%;
+  height: 22%;
+  z-index: 1000;
+  position: relative;
+  top: 39%;
+  left: -21%;
+}
+
+.hits-gone {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: black;
+  background-color: rgb(140, 0, 0);
+  font-weight: bold;
 }
 
 .hidden {
