@@ -213,7 +213,16 @@ h1 {
   z-index: 600;
   position: fixed;
   top: 61%;
-  left: 86%;
+  left: 87%;
+}
+
+#ancientResin {
+  height: 10%;
+  width: 3%;
+  z-index: 1200;
+  position: fixed;
+  top: 59%;
+  left: 84%;
 }
 
 .hits-gone {

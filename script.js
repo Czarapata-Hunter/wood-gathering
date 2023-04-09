@@ -23,6 +23,7 @@ const stackedWood3 = document.getElementById('stacked-wood3');
 const stackedWood4 = document.getElementById('stacked-wood4');
 const stackedWood5 = document.getElementById('stacked-wood5');
 const markOfEnt = document.getElementById('markOfEnt');
+const ancientResin = document.getElementById('ancientResin');
 const treeHeart = document.getElementById('treeHeart');
 
 // let hitCount = 0;
@@ -53,6 +54,7 @@ const reset = () => {
   stackedWood5.classList.add('hidden');
   markOfEnt.classList.add('hidden');
   treeHeart.classList.add('hidden');
+  ancientResin.classList.add('hidden');
 };
 reset();
 
@@ -82,6 +84,12 @@ const woodPictures = () => {
 const markOfEntPicture = () => {
   if (rewardsArray.includes('Mark of Ent')) {
     markOfEnt.classList.remove('hidden');
+  }
+};
+
+const ancientResinPicture = () => {
+  if (rewardsArray.includes('Ancient Resin')) {
+    ancientResin.classList.remove('hidden');
   }
 };
 
@@ -120,6 +128,7 @@ const success = () => {
   woodPictures();
   markOfEntPicture();
   treeHeartPicture();
+  ancientResinPicture();
 };
 
 const failing = () => {
