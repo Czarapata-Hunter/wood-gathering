@@ -35,8 +35,6 @@ h1 {
 }
 
 .btn {
-  /* display: flex; */
-  /* flex-direction: column; */
   margin-left: 5rem;
   margin: 3rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +47,6 @@ h1 {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  /* font-family: Impact; */
   font-size: 1.8rem;
   padding: 18px 37px;
   text-decoration: none;
@@ -78,7 +75,6 @@ h1 {
 
   background: linear-gradient(to bottom, #1f2b05 5%, #324701 100%);
   border-top: 1px;
-  /* border-left: none; */
   border-bottom: 2px;
   border-style: solid;
   border-color: black;
@@ -98,9 +94,8 @@ h1 {
   width: 25%;
 }
 
-.test3 {
+.stats-block {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   width: 40vw;
   height: 40vh;
@@ -114,7 +109,6 @@ h1 {
   border-color: black;
 
   color: white;
-  /* font-size: 1.5rem; */
 }
 
 #stats-title {
@@ -149,7 +143,6 @@ h1 {
   border: 2px solid #74b807;
   width: 40vw;
   height: 60vh;
-  /* justify-content: space-around; */
   border-radius: 20px;
 }
 
@@ -239,7 +232,6 @@ h1 {
 }
 
 .modal {
-  /* display: flex; */
   position: absolute;
   top: 50%;
   left: 50%;

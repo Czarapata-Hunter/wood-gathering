@@ -63,8 +63,8 @@ const rare = [
   'Mark of Ent',
   'Ancient Resin',
   'Heart of the Tree',
-  'Test1',
-  'Test2',
+  'Orphaned Baby Owl-Bear',
+  'Orphaned Baby Tree Ent',
 ];
 
 const woodPictures = () => {
