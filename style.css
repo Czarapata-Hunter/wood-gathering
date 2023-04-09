@@ -198,6 +198,15 @@ h1 {
   left: -21%;
 }
 
+#markOfEnt {
+  height: 10%;
+  width: 5%;
+  z-index: 600;
+  position: fixed;
+  top: 55%;
+  left: 80%;
+}
+
 .hits-gone {
   display: flex;
   justify-content: center;

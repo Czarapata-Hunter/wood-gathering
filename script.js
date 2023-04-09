@@ -22,6 +22,7 @@ const stackedWood2 = document.getElementById('stacked-wood2');
 const stackedWood3 = document.getElementById('stacked-wood3');
 const stackedWood4 = document.getElementById('stacked-wood4');
 const stackedWood5 = document.getElementById('stacked-wood5');
+const markOfEnt = document.getElementById('markOfEnt');
 
 // let hitCount = 0;
 // let failCount = 0;
@@ -49,6 +50,7 @@ const reset = () => {
   stackedWood3.classList.add('hidden');
   stackedWood4.classList.add('hidden');
   stackedWood5.classList.add('hidden');
+  markOfEnt.classList.add('hidden');
 };
 reset();
 
@@ -75,16 +77,18 @@ const woodPictures = () => {
   }
 };
 
+const markOfEntPicture = () => {
+  if (rewardsArray.includes('Mark of Ent')) {
+    markOfEnt.classList.remove('hidden');
+  }
+};
+
 btnReset.addEventListener('click', reset);
 
 btnRules.addEventListener('click', function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 });
-
-// btnClose.addEventListener('click', function () {
-//   closeRules();
-// });
 
 overlay.addEventListener('click', function () {
   closeRules();
@@ -108,6 +112,7 @@ const success = () => {
   hits.textContent = hitCount;
   wood.textContent = woodCount;
   woodPictures();
+  markOfEntPicture();
 };
 
 const failing = () => {
